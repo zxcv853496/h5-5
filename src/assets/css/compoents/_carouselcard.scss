@@ -1,0 +1,32 @@
+.carousel-card{
+    width: 100%;
+    background-color: var(--sub_color);
+    padding-top: 20px;
+    .top{
+        height: 100px;
+        .container{
+            margin-left: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: var(--sub2_color);
+            color: white;
+        }
+        .owl-nav{
+            display: none;
+        }
+        .owl-dots{
+            display: none;
+        }
+    }
+    .bottom{
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            font-size: 30px;
+            color: #ACC083;
+            transform: rotate(90deg);
+        }
+    }
+}

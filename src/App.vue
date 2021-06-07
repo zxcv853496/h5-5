@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Mainpage />
+    <Content1page />
+    <Carouselcard />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import '@/assets/css/app.scss'
+import Mainpage from './components/mainpage/index.vue'
+import Content1page from './components/content1page/index.vue'
+import Carouselcard from './components/carouselcard/index.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Mainpage,
+    Content1page,
+    Carouselcard,
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
