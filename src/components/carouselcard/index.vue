@@ -8,6 +8,9 @@ import carousel from 'vue-owl-carousel'
 
 export default {
     components: { carousel },
+    props:[
+        'main_data'
+    ]
 }
 </script>
 

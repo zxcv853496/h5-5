@@ -1,20 +1,14 @@
 <div class="carousel-card">
     <div class="top">
-        <carousel loop="true" nav="true" autoplay="true" dots='false'>
-            <div class="container">
-                123
-            </div>
-            <div class="container">
-                546
-            </div>
-            <div class="container">
-                789
-            </div>
-            <div class="container">
-                1888
-            </div>
-            <div class="container">
-                999
+        <carousel loop nav  dots autoplay>
+            <div class="container" v-for="item in main_data.card">
+                <div class="content-title">
+                    <h2>{{ item.price }}</h2>
+                    <span>元券</span>
+                </div>
+                <div class="content">
+                    {{ item.content }}
+                </div>
             </div>
         </carousel>
     </div>

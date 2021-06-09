@@ -1,15 +1,54 @@
 .carousel-card{
     width: 100%;
     background-color: var(--sub_color);
-    padding-top: 20px;
+    padding-top: 30px;
+    carousel{
+        display: flex;
+        justify-content: space-between;
+    }
     .top{
-        height: 100px;
+        
         .container{
             margin-left: 10px;
             width: 100px;
             height: 100px;
+            margin: 0 auto;
             background-color: var(--sub2_color);
             color: white;
+            padding:4px;
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media (min-width:414px) {
+                width: 125px;
+                height: 125px;
+                padding: 10px;
+                padding-top: 0;
+            }
+            @media (min-width:768px) {
+                width: 200px;
+                height: 200px;
+            }
+            .content-title{
+                text-align: center;
+                h2{
+                    margin: 0;
+                    display: inline-block;
+                    font-size: 48px;
+                    @media (min-width:768px) {
+                        font-size: 8vmin;
+                    }
+                }
+            }
+            .content{
+                border-top: 1px solid white;
+                font-size: 3vmin;
+                text-align: center;
+                @media (min-width:768px) {
+                    font-size: 20px;
+                }
+            }
         }
         .owl-nav{
             display: none;
