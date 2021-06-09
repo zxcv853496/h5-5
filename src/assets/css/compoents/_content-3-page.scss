@@ -7,11 +7,139 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (min-width:768px) {
+            font-size: 1.5em;
+        }
     }
     .container{
         width: 80%;
         margin: 0 auto;
         padding: 30px 0;
         padding-top: 10px;
+        @media (min-width:768px) {
+            width: 60%;
+        }
+        .input-data{
+            width: 100%;
+            height: 40px;
+            position: relative;
+            margin-top: 20px;
+            @media (min-width:768px) {
+                margin-top: 30px;
+            }
+            .input{
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-bottom: 2px solid silver;
+                font-size: 17px;
+                background-color: transparent;
+                outline: none;
+                caret-color:var(--text_color);
+                font-size: 14px;
+                &:focus{
+                    ~label{
+                        transform: translateY(-30px);
+                        font-size: 12px;
+                        color: var(--text_color);
+                    }
+                    ~.underline::before{
+                            transform: scaleX(1);
+                    }
+                }
+                &:valid{
+                    ~label{
+                        transform: translateY(-30px);
+                        font-size: 12px;
+                        color: var(--text_color);
+                    }
+                    ~.underline::before{
+                        transform: scaleX(1);
+                    }
+                }
+            }
+            label{
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+                color: grey;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                @media (min-width:768px) {                
+                    font-size: 20px;
+                    color: #afafaf;
+                }
+            }
+            .underline{
+                position: absolute;
+                bottom: 0px;
+                height: 2px;
+                width: 100%;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    background: var(--text_color);
+                    transform: scaleX(0);
+                    transition:transform 0.3s ease;
+                }
+
+            }
+        }
+
+        .textarea{
+            height: 100%;
+            margin-top: 30px;
+            @media (min-width:768px) {
+                margin-top: 40px;
+            }
+            textarea{
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid silver;
+                font-size: 17px;
+                background-color: transparent;
+                outline: none;
+                caret-color:var(--text_color);
+                font-size: 14px;
+                position: relative;
+                &:focus{
+                    ~label{
+                        transform: translateY(-30px);
+                        font-size: 12px;
+                        color: var(--text_color);
+                    }
+                    ~.underline::before{
+                            transform: scaleX(1);
+                    }
+                }
+                &:valid{
+                    ~label{
+                        transform: translateY(-30px);
+                        font-size: 12px;
+                        color: var(--text_color);
+                    }
+                    ~.underline::before{
+                        transform: scaleX(1);
+                    }
+                }
+            }
+            label{
+                position: absolute;
+                top: 5px;
+                left: 0;
+                color: grey;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                @media (min-width:768px) {                
+                    font-size: 20px;
+                    color: #afafaf;
+                }
+            }
+            .underline{
+                bottom: 5px;
+            }
+        }
     }
 }

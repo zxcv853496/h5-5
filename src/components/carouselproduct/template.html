@@ -1,0 +1,37 @@
+<div class="carouselproduct">
+    <div class="container-top">
+        <div class="arrow-container left" >
+            <div class="arrow" v-on:click="subShow">
+                <i class="material-icons">
+                    chevron_left
+                </i>
+            </div>
+        </div>
+        <transition-group tag='div' class="container" :name="transitionName">
+            <div class="img-container"
+            v-for="(item, index) in main_data.img"
+            :key="index"
+            v-show ="index === show">
+                {{item.img}}
+            </div>
+        </transition-group>
+        <div class="arrow-container right" >
+            <div class="arrow" v-on:click="addShow">
+                <i class="material-icons">
+                    chevron_right
+                </i>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+        <transition-group tag='div' class="container" :name="transitionName">
+            <div class="content-container"
+            v-for="(item, index) in main_data.img"
+            :key="index"
+            v-show ="index === show">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.price }}</p>
+            </div>
+        </transition-group>
+    </div>
+</div>
