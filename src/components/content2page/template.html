@@ -1,43 +1,17 @@
 <div class="content2page">
     <div class="container top">
-        <div class="content-title">
-            <p>lorem</p>
-        </div>
-        <div class="content-title">
-            <p>lorem</p>
-        </div>
-        <div class="content-title">
-            <p>lorem</p>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <p>Lorem</p>
-            <p>點擊查看</p>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <p>Lorem</p>
-            <p>點擊查看</p>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <p>Lorem</p>
-            <p>點擊查看</p>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <p>Lorem</p>
-            <p>點擊查看</p>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <p>Lorem</p>
-            <p>點擊查看</p>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <p>Lorem</p>
-            <p>點擊查看</p>
+        <div class="content" 
+        data-aos="fade-right" 
+        data-aos-duration="1000"
+        data-aos-anchor-placement="center-bottom"
+        v-for = '(item, index) in main_data.product_top'>
+            <div class="img-container">
+                <img :src="item.img" alt="">
+            </div>
+            <div class="p-container">
+                <p>{{ item.content }}</p>
+                <p @click="showProduct">點擊查看</p>
+            </div>
         </div>
     </div>
     <div class="hr">
@@ -47,47 +21,18 @@
         </span>
     </div>
     <div class="container bottom">
-        <div class="content">
-            <div class="img-container"></div>
-            <div class="sub-content">
-                <div class="left">
-                    <p>lorem</p>
-                </div>
-                <div class="right">
-                    <a>購買</a>
-                    <a class="mask" href="#">購買</a>
-                </div>
+        <div class="content"
+        data-aos="zoom-in-up" 
+        data-aos-duration="1000"
+        data-aos-anchor-placement="center-bottom"
+        v-for = "item in main_data.product_bottom">
+            <div class="img-container">
+                <img :src="item.img" alt="">
+                <span class="price">${{ item.price }}</span>
             </div>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
             <div class="sub-content">
                 <div class="left">
-                    <p>lorem</p>
-                </div>
-                <div class="right">
-                    <a>購買</a>
-                    <a class="mask" href="#">購買</a>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <div class="sub-content">
-                <div class="left">
-                    <p>lorem</p>
-                </div>
-                <div class="right">
-                    <a>購買</a>
-                    <a class="mask" href="#">購買</a>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="img-container"></div>
-            <div class="sub-content">
-                <div class="left">
-                    <p>lorem</p>
+                    <p>{{ item.content }}</p>
                 </div>
                 <div class="right">
                     <a>購買</a>

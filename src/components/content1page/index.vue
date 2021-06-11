@@ -4,7 +4,9 @@
 
 <script>
 export default {
-
+    props:[
+        'main_data'
+    ]
 }
 </script>
 

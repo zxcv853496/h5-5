@@ -1,29 +1,38 @@
 <div class="content-1-page">
     <div class="container">
-        <div class="main-container top">
-            <div class="sub-container left">
+        <div class="main-container top" >
+            <div class="sub-container left"
+            data-aos="fade-right"
+            data-aos-duration="1000">
                 <div class="top">
+                    <img :src="main_data.product[0].img" alt="">
                 </div>
                 <div class="bottom">
                     <p class="title">純棉</p>
                     <div class="content">Lorem ipsum dolor sit amet</div>
                 </div>
             </div>
-            <div class="sub-container right">
+            <div class="sub-container right"
+            data-aos="fade-left"
+            data-aos-duration="1000">
                 <div class="top">
                     <p class="title">新款。家</p> 
                     <div class="content">ipsum dolor sit amet</div>
                 </div>
                 <div class="bottom">
+                    <img :src="main_data.product[1].img" alt="">
                 </div>
             </div>
         </div>
-        <div class="main-container mid-1">
+        <div class="main-container mid-1"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top"
+        data-aos-duration="1000">
             <div class="img-container">
-
+                <img :src="main_data.product[2].img" alt="">
             </div>
             <div class="img-container">
-                
+                <img :src="main_data.product[3].img" alt="">
             </div>
             <div class="img-container">
                 <p class="title">熱銷</p>
@@ -33,17 +42,33 @@
             </div>
         </div>
         <div class="main-container mid-2">
-            <div class="img-container">
+            <div class="img-container"
+            data-aos="fade-right"
+            data-aos-anchor-placement="center"
+            data-aos-duration="1000">
                 <p class="title">愛。生活</p>
                 <div class="content">Lorem ipsum dolor sit amet</div>
             </div>
-            <div class="img-container">
+            <div class="img-container"
+            data-aos="fade-left"
+            data-aos-anchor-placement="center"
+            data-aos-duration="1000">
+                <img :src="main_data.product[4].img" alt="">
             </div>
         </div>
-        <div class="main-container bottom">
-            <div class="img-container"></div>
-            <div class="img-container"></div>
-            <div class="img-container"></div>
+        <div class="main-container bottom"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center"
+        data-aos-duration="1000">
+            <div class="img-container">
+                <img :src="main_data.product[5].img" alt="">
+            </div>
+            <div class="img-container">
+                <img :src="main_data.product[6].img" alt="">
+            </div>
+            <div class="img-container">
+                <img :src="main_data.product[7].img" alt="">
+            </div>
         </div>
     </div>
 </div>

@@ -1,5 +1,8 @@
 <div class="carouselproduct">
-    <div class="container-top">
+    <div class="container-top"
+    data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-anchor-placement="center-bottom">
         <div class="arrow-container left" >
             <div class="arrow" v-on:click="subShow">
                 <i class="material-icons">
@@ -12,7 +15,7 @@
             v-for="(item, index) in main_data.img"
             :key="index"
             v-show ="index === show">
-                {{item.img}}
+                <img :src="item.img" alt="">
             </div>
         </transition-group>
         <div class="arrow-container right" >
@@ -23,7 +26,10 @@
             </div>
         </div>
     </div>
-    <div class="container-bottom">
+    <div class="container-bottom"
+    data-aos="fade-right" 
+    data-aos-duration="1000"
+    data-aos-anchor-placement="center-bottom">
         <transition-group tag='div' class="container" :name="transitionName">
             <div class="content-container"
             v-for="(item, index) in main_data.img"

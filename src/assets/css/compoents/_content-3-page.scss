@@ -141,5 +141,20 @@
                 bottom: 5px;
             }
         }
+        .a-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            .a{
+                width: 50%;
+                padding: 10px  5px;
+                color: white;
+                background-color: #E9C16A;
+                text-decoration: none;
+                text-align: center  ;
+            }
+        }
     }
 }
